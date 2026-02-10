@@ -23,4 +23,4 @@ Jiaxi_items = {
 }
 
 for index, item in enumerate(Jiaxi_items):
-    print(index, ":", item['name'])
+    print(index, ":", item("Name"))
