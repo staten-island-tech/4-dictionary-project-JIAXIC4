@@ -13,14 +13,44 @@
 # they are done shopping, print the names of the items purchased and the
 # total of the cart.
 
-purchase = input("Welcome to Jiaxi's Store!" )
 
-Jiaxi_items = {
+
+Jiaxi_items = [
+{
     "Name": "Samsung 55 in tv",
     "Price": 67.98,
     "Description": "useful tv~!"
 
-}
+},
+{
+    "Name": "Dog",
+    "Price": 67.98,
+    "Description": "Cute animal~!"
 
-for index, item in enumerate(Jiaxi_items):
-    print(index, ":", item("Name"))
+},
+{
+    "Name": "Justin",
+    "Price": 0.1,
+    "Description": "useful person~!"
+
+},
+
+{
+    "Name": "bball",
+    "Price": 10000,
+    "Description": "useful ball~!"
+
+}
+]
+
+print("Welcome to Jiaxi's Store! Select an item to purchase!:")
+
+for index, item in enumerate(Jiaxi_items, start=0):
+    print(index, ":", item["Name"])
+purchase = input("What would you like to buy? : ")
+
+print("Thank you for your purchase! Here is your receipt", purchase)
+# print(Jiaxi_items[0]["Name"])
+
+# for index, item in enumerate(Jiaxi_items):
+#     print(index, ":", item("Name"))
