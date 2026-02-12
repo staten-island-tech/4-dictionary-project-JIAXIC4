@@ -49,7 +49,7 @@ for index, item in enumerate(Jiaxi_items, start=0):
     print(index, ":", item["Name"])
 purchase = input("What would you like to buy? : ")
 
-print("Thank you for your purchase! Here is your receipt", purchase)
+print("Thank you for your purchase! Here is your receipt: ", purchase)
 # print(Jiaxi_items[0]["Name"])
 
 # for index, item in enumerate(Jiaxi_items):
