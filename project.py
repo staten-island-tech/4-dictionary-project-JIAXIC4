@@ -48,19 +48,32 @@ print("Welcome to Jiaxi's Store! Select an item to purchase!:")
 for index, item in enumerate(Jiaxi_items, start=0):
     print(index, ":", item["Name"], end=" $")
     print(item["Price"])
+    print(item["Description"])
 
+cart = []
 
-
-while :
 purchase = input("What would you like to buy? : ")
+cart.append()
 done = input("Are you done with your purchase?")
-if done == "no":
-    purchase = input("What would you like to buy? : ")
-if done == "yes":
-    price = purchase["price"]
-    print("Thank you for your purchase! Here is your receipt: ", purchase, price)
 
-for purchase in item:
+while done == "no":
+    purchase = input("What would you like to buy? : ")
+    cart.append()
+    done = input("Are you done with your purchase?")
+    if done == "yes":
+    # price = purchase["price"]
+        print("Thank you for your purchase! Here is your receipt: ", purchase)
+
+# while :
+# purchase = input("What would you like to buy? : ")
+# done = input("Are you done with your purchase?")
+# if done == "no":
+#     purchase = input("What would you like to buy? : ")
+# if done == "yes":
+#     price = purchase["price"]
+#     print("Thank you for your purchase! Here is your receipt: ", purchase, price)
+
+# for purchase in item:
     
 
 
