@@ -24,7 +24,7 @@ Jiaxi_items = [
 },
 {
     "Name": "Dog",
-    "Price": 67.98,
+    "Price": 42.41,
     "Description": "Cute animal~!"
 
 },
@@ -46,10 +46,24 @@ Jiaxi_items = [
 print("Welcome to Jiaxi's Store! Select an item to purchase!:")
 
 for index, item in enumerate(Jiaxi_items, start=0):
-    print(index, ":", item["Name"])
-purchase = input("What would you like to buy? : ")
+    print(index, ":", item["Name"], end=" $")
+    print(item["Price"])
 
-print("Thank you for your purchase! Here is your receipt: ", purchase)
+
+
+while :
+purchase = input("What would you like to buy? : ")
+done = input("Are you done with your purchase?")
+if done == "no":
+    purchase = input("What would you like to buy? : ")
+if done == "yes":
+    price = purchase["price"]
+    print("Thank you for your purchase! Here is your receipt: ", purchase, price)
+
+for purchase in item:
+    
+
+
 # print(Jiaxi_items[0]["Name"])
 
 # for index, item in enumerate(Jiaxi_items):
