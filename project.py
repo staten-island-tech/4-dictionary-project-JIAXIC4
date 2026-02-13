@@ -53,16 +53,16 @@ for index, item in enumerate(Jiaxi_items, start=0):
 cart = []
 
 purchase = input("What would you like to buy? : ")
-cart.append()
-done = input("Are you done with your purchase?")
+# cart.append(purchase)
+# done = input("Are you done with your purchase?")
+for items in Jiaxi_items:
+    if purchase in Jiaxi_items["Name"]: 
+        cart.append(purchase)    
+        done = input("Are you done with your purchase?")
+    else:
+        print("Your Item is not avalible in this store")
+        purchase = input("What would you like to buy? : ")
 
-while done == "no":
-    purchase = input("What would you like to buy? : ")
-    cart.append()
-    done = input("Are you done with your purchase?")
-    if done == "yes":
-    # price = purchase["price"]
-        print("Thank you for your purchase! Here is your receipt: ", purchase)
 
 # while :
 # purchase = input("What would you like to buy? : ")
