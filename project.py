@@ -30,7 +30,7 @@ Jiaxi_items = [
 },
 {
     "Name": "Justin",
-    "Price": 0.1,
+    "Price": 0.10,
     "Description": "useful person~!"
 
 },
@@ -56,7 +56,7 @@ purchase = input("What would you like to buy? : ")
 # cart.append(purchase)
 # done = input("Are you done with your purchase?")
 for items in Jiaxi_items:
-    if purchase in Jiaxi_items["Name"]: 
+    if purchase in Jiaxi_items[Name]: 
         cart.append(purchase)    
         done = input("Are you done with your purchase?")
     else:
