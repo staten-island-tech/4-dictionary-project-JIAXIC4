@@ -52,16 +52,19 @@ for index, item in enumerate(Jiaxi_items, start=0):
 
 cart = []
 
+def check_item(item_name):
+    if not isinstance(item_name,str):
+        return False
 purchase = input("What would you like to buy? : ")
 # cart.append(purchase)
 # done = input("Are you done with your purchase?")
-for items in Jiaxi_items:
-    if purchase in Jiaxi_items["Name"]: 
-        cart.append(purchase)    
-        done = input("Are you done with your purchase?")
-    else:
-        print("Your Item is not avalible in this store")
-        purchase = input("What would you like to buy? : ")
+
+if check_item(purchase):
+    cart.append(purchase)    
+    done = input("Are you done with your purchase?")
+else:
+    print("Your Item is not avalible in this store")
+    purchase = input("What would you like to buy? : ")
 
 
 # while :
