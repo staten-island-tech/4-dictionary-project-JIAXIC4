@@ -51,25 +51,35 @@ for index, item in enumerate(Jiaxi_items, start=0):
     print(item["Description"])
 
 cart = []
+total = 0
+done = "no"
 
-def check_item(item_name):
-    if not isinstance(item_name,str):
-        return False
-purchase = input("What would you like to buy? : ")
-# cart.append(purchase)
-# done = input("Are you done with your purchase?")
+while done == "no":
+    purchase = input("What would you like to buy? : ").strip().lower()
+    found = False
+    for items in Jiaxi_items:
+        if purchase == items["Name"].strip().lower(): 
+            cart.append(items) 
+            total += items["Price"]   
+            done = input("Are you done with your purchase?")
+            found = True
+            break
+    
+    if not found:
+        print("Your Item is not avalible in this store")
+        done = input("Are you done with your purchase?")
 
-if check_item(purchase):
-    cart.append(purchase)    
-    done = input("Are you done with your purchase?")
-else:
-    print("Your Item is not avalible in this store")
-    purchase = input("What would you like to buy? : ")
+if done == "yes":
+    print("Here are the items in your cart")
+    for items in cart:
+        print("-", items)
+    print("Total: $", total)
+        
 
 
 # while :
 # purchase = input("What would you like to buy? : ")
-# done = input("Are you done with your purchase?")
+
 # if done == "no":
 #     purchase = input("What would you like to buy? : ")
 # if done == "yes":
